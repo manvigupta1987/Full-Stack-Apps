@@ -1,7 +1,22 @@
+.form-view {
+  width: 50%;
+}
 .form-view > label {
   padding: 0px 0px 10px;
+  justify-content: space-between;
+  width: 250px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
 }
 
+.form-view input {
+  margin-left: 10px;
+  display: inline-block;
+}
+.form-view select {
+  margin-left: 10px
+}
 #add-form {
   text-align: center;
 }

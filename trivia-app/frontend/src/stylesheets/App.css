@@ -1,3 +1,7 @@
+body {
+  font-family: Algerian;
+}
+
 .App-header {
   background-color: #222;
   color: white;
@@ -11,6 +15,11 @@
 
 .App-header > h1 {
   color: dodgerblue;
+}
+
+.App-header > h2:hover {
+  cursor: pointer;
+  color: darkgray;
 }
 
 .App-intro {
