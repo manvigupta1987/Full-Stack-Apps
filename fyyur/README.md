@@ -2,6 +2,12 @@
 
 Fyyur is a Udacity Fullstack Nanodegree project which facilitates the discovery and bookings of shows between local performing artists and venues. This site lets you list new artists and venues, discover them, and list shows with artists as a venue owner.
 
+![alt text](screenshots/home.png)
+![alt text](screenshots/venue_form.png)
+![alt text](screenshots/artist_form.png)
+![alt text](screenshots/show_form.png)
+![alt text](screenshots/shows.png)
+![alt text](screenshots/artists.png)
 
 ### Tech Stack
 
