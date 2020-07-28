@@ -76,7 +76,6 @@ def create_app(test_config=None):
             abort(404)
         categories = Category.query.order_by(Category.id).all()
         formatted_categories = [category.format() for category in categories]
-        print(formatted_categories)
         formatted_questions = paginate_questions(request, questions)
         if len(formatted_questions) == 0:
             abort(404)
@@ -135,10 +134,7 @@ def create_app(test_config=None):
         search = body.get('searchTerm', None)
         try:
             if search:
-                print(search)
                 questions = Question.query.filter(Question.question.ilike(f'%{search}%')).all()
-
-                print(questions)
 
                 if len(questions) == 0:
                     return jsonify({
@@ -165,8 +161,7 @@ def create_app(test_config=None):
                     'total_questions': len(formatted_questions)
                 })
 
-        except Exception as e:
-            print(e)
+        except:
             abort(422)
 
     '''
@@ -214,7 +209,7 @@ def create_app(test_config=None):
             abort(400)
 
         questions = Question.query.filter(Question.category == category['id']).all()
-        total  = len(questions)
+        total = len(questions)
 
         if len(prev_questions) == total:
             return jsonify({
@@ -238,7 +233,7 @@ def create_app(test_config=None):
         while is_question_used(random_question):
             random_question = random.choice(formatted_questions)
 
-        return jsonify ({
+        return jsonify({
             'success': True,
             'question': random_question
         })
