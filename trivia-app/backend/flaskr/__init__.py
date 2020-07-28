@@ -78,6 +78,8 @@ def create_app(test_config=None):
         formatted_categories = [category.format() for category in categories]
         print(formatted_categories)
         formatted_questions = paginate_questions(request, questions)
+        if len(formatted_questions) == 0:
+            abort(404)
 
         return jsonify({
             'success': True,
@@ -99,7 +101,7 @@ def create_app(test_config=None):
     def delete_question(question_id):
         question = Question.query.filter(Question.id == question_id).one_or_none()
         if question is None:
-            abort(404)
+            abort(422)
         question.delete()
         questions = Question.query.order_by(Question.id).all()
         current_questions = paginate_questions(request, questions)
@@ -154,8 +156,13 @@ def create_app(test_config=None):
                 question = Question(question=question, answer=answer, difficulty=difficulty, category=category)
                 question.insert()
 
+                current_questions = Question.query.all()
+                formatted_questions = paginate_questions(request, current_questions)
+
                 return jsonify({
-                    'success': True
+                    'success': True,
+                    'created': question.id,
+                    'total_questions': len(formatted_questions)
                 })
 
         except Exception as e:
