@@ -134,6 +134,15 @@ class TriviaTestCase(unittest.TestCase):
 
     def test_get_random_question(self):
         res = self.client().post('/quizzes',
+                                 json={'quiz_category': {'id': 0}, 'previous_questions': [20]})
+        data = json.loads(res.data)
+
+        self.assertEqual(res.status_code, 200)
+        self.assertEqual(data['success'], True)
+        self.assertTrue(data['question'])
+
+    def test_get_random_question_from_all_category(self):
+        res = self.client().post('/quizzes',
                                  json={'quiz_category': {'type': 'Science', 'id': 1}, 'previous_questions': [20]})
         data = json.loads(res.data)
 

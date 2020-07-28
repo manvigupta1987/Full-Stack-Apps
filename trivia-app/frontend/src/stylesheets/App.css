@@ -46,3 +46,8 @@ form {
   width: 80%;
   margin: auto;
 }
+
+.category {
+    width: 22px;
+    height: 22px;
+}

@@ -1,6 +1,7 @@
 # Full Stack Trivia API Backend
 
 ## Getting Started
+These instructions will help to setup the project on your local machine for development and testing purposes.
 
 ### Installing Dependencies
 

@@ -75,7 +75,9 @@ def create_app(test_config=None):
         if len(questions) == 0:
             abort(404)
         categories = Category.query.order_by(Category.id).all()
-        formatted_categories = [category.format() for category in categories]
+        categories_dict = {}
+        for category in categories:
+            categories_dict[category.id] = category.type
         formatted_questions = paginate_questions(request, questions)
         if len(formatted_questions) == 0:
             abort(404)
@@ -84,7 +86,7 @@ def create_app(test_config=None):
             'success': True,
             'questions': formatted_questions,
             'total_questions': len(questions),
-            'categories': formatted_categories,
+            'categories': categories_dict,
             'currentCategory': list(set(question['category'] for question in formatted_questions))
         })
 
@@ -208,7 +210,11 @@ def create_app(test_config=None):
         if (category is None) or (prev_questions is None):
             abort(400)
 
-        questions = Question.query.filter(Question.category == category['id']).all()
+        if category['id'] == 0:
+            questions = Question.query.all()
+        else:
+            questions = Question.query.filter(Question.category == category['id']).all()
+
         total = len(questions)
 
         if len(prev_questions) == total:
