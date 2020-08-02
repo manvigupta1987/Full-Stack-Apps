@@ -17,10 +17,10 @@ Applied concepts:
 - Configure local database and connect it to a web application
 - Create Model Schemas with columns and relationships (1:1, 1:n and N:N)
 - Use SQLAlchemy ORM with PostgreSQL to query, insert, edit & delete Data
-- Use WTForms to encapsulate input forms in seperate file & to allow for custom validations
-- Use Boostrap as a simple to use Front End Libary and Ajax to fetch flask routes
+- Use WTForms to encapsulate input forms in separate file & to allow for custom validations
+- Use Bootstrap as a simple to use Front End Library and Ajax to fetch flask routes
 - Create SQL-like Queries, but without any SQL syntax, only using SQLAlchemy ORM
-- How to clearly structurize a larger web application in different files & folders
+- How to clearly structure a larger web application in different files & folders
 
 [View Project](https://github.com/manvigupta1987/Full-Stack-Projects/tree/master/fyyur).
 
@@ -38,10 +38,10 @@ Used tech stack:
 - `README.md` to document project setup & API endpoints
 
 Applied concepts:
-- using best-practice `PEP8-style` to design and structur code
+- using best-practice `PEP8-style` to design and structure code
 - `test-driven-development (TDD)` to rapidly create highly tested & maintainable endpoints.
 - directly test and make response to any endpoint out there with `curl`.
-- implement `errorhandler` to format & design appropiate error messages to client
+- implement `errorhandler` to format & design appropriate error messages to client
 - becoming aware of the importance of extensive project documentation & testing.
 
 [View Project](https://github.com/manvigupta1987/Full-Stack-Projects/tree/master/trivia-app).
@@ -87,7 +87,7 @@ It covers following technical topics in 1 app:
 1. Database modeling with `postgres` & `sqlalchemy` (see `models.py`)
 2. API to performance CRUD Operations on database with `Flask` (see `app.py`)
 3. Automated testing with `Unittest` (see `test_app`)
-4. Authorization & Role based Authentification with `Auth0` (see `auth.py`)
+4. Authorization & Role based Authentication with `Auth0` (see `auth.py`)
 5. Deployment on `Heroku` (see `setup.sh`)
 
 [View Project]().
