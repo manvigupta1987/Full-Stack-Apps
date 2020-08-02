@@ -1,4 +1,4 @@
-# FSND Full-Stack-Developer Project Submissions
+# Full-Stack-Developer Projects
 
 ### Project 1: Booking Site Fy-yur
 
