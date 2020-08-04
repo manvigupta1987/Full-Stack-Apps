@@ -2,7 +2,7 @@
 
 ### Project 1: Booking Site Fy-yur
 
-Aim of the project was to build a full-stack Web App with Flask and Boostrap which enables
+Aim of the project was to build a full-stack Web App with Flask and Bootstrap which enables
 Venues & Artists to list themselves and arrange Shows together.
 
 Used tech stack:
