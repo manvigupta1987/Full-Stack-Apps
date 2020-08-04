@@ -68,7 +68,6 @@ Deployed a Flask API to a Kubernetes cluster using Docker, AWS EKS, CodePipeline
 (Application has been teared down after successful review to avoid incurring additional costs)
 
 [View Project]().
-
 Used tech stack:
 - `Docker` for app containerization & image creation to ensure environment consistency across development and production server
 - `AWS EKS` & `Kubernetes` as container orchestration service to allow for horizontal scaling
