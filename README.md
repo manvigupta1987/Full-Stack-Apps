@@ -67,7 +67,7 @@ Deployed a Flask API to a Kubernetes cluster using Docker, AWS EKS, CodePipeline
 
 (Application has been teared down after successful review to avoid incurring additional costs)
 
-[View Project]().
+[View Project](https://github.com/manvigupta1987/flaskapp-deployment-usingEKS).
 Used tech stack:
 - `Docker` for app containerization & image creation to ensure environment consistency across development and production server
 - `AWS EKS` & `Kubernetes` as container orchestration service to allow for horizontal scaling
@@ -76,18 +76,4 @@ Used tech stack:
 - `kubectl` to interact with kubernetes cluster & pods
 - `CodePipeline` for Continuous Delivery (CD) & to watch Github Repo for changes
 - `CodeBuild` for Continuous Integration (CI), together with `pytest` for automated testing before deployment
-
-
-### Project 5: Capstone
-
-This is the last project of the `Udacity-Full-Stack-Nanodegree` Course.
-It covers following technical topics in 1 app:
-
-1. Database modeling with `postgres` & `sqlalchemy` (see `models.py`)
-2. API to performance CRUD Operations on database with `Flask` (see `app.py`)
-3. Automated testing with `Unittest` (see `test_app`)
-4. Authorization & Role based Authentication with `Auth0` (see `auth.py`)
-5. Deployment on `Heroku` (see `setup.sh`)
-
-[View Project]().
 
