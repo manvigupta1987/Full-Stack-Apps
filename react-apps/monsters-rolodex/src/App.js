@@ -4,12 +4,9 @@ import CardList from './components/card-list/card-list.component'
 import Search from './components/search/search-component';
 
 class App extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      monsters: [],
-      searchTerm : ''
-    }
+  state = {
+    monsters: [],
+    searchTerm : ''
   }
 
   componentDidMount(){
